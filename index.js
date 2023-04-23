@@ -26,31 +26,6 @@ const addFct = () => {
     $('#next').click(suivant)
 }
 
-// var selector = $(".tabs-component");
-// var count = 0;
-// var waitForEl = function(selector, callback) {
-//     var selector = $(".tabs-component");
-//     // if(!count) {
-//     //     count=0;
-//     // }
-//     count++;
-//     console.log("count: " + count);
-//     if (selector.length) {
-//         callback();
-//         console.log("Yeah");
-//     } else {
-//         setTimeout(function() {
-//             waitForEl(selector, callback);
-//         }, 1000);
-//     }
-// };
-
-// waitForEl('#prev', function() {
-//     // work the magic
-//     console.log("Yeah2");
-//     addFct();
-
-// });
 
 
 var onReadyDomElement = (element, callback) => {
@@ -63,9 +38,9 @@ var onReadyDomElement = (element, callback) => {
     }
   };
   // example
-  onReadyDomElement('#header', function(e) {
-    e.html('OK');
-  });
+//   onReadyDomElement('#header', function(e) {
+//     e.html('OK');
+//   });
 
 
 const init = () => {
