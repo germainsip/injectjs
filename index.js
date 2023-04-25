@@ -1,17 +1,24 @@
 
 
-var waitForEl = function (selector, callback, maxTimes = false) {
-    if (jQuery(selector).length) {
-      callback();
-    } else {
-      if (maxTimes === false || maxTimes > 0) {
-        (maxTimes != false) && maxTimes-- ;
-        setTimeout(function () {
-          waitForEl(selector, callback, maxTimes);
-        }, 100);
-      }
+class Page {
+    constructor(titre,html){
+        this.titre = titre
+        this.html = html
     }
-  };
+} 
+
+// var waitForEl = function (selector, callback, maxTimes = false) {
+//     if (jQuery(selector).length) {
+//       callback();
+//     } else {
+//       if (maxTimes === false || maxTimes > 0) {
+//         (maxTimes != false) && maxTimes-- ;
+//         setTimeout(function () {
+//           waitForEl(selector, callback, maxTimes);
+//         }, 100);
+//       }
+//     }
+//   };
 
 const precedent = () => {
     console.log('précédent');
@@ -38,15 +45,15 @@ const loadContent = (div, page) => {
 
 
 
-var onReadyDomElement = (element, callback) => {
-    if (jQuery(element).length) {
-      callback(jQuery(element));
-    } else {
-      setTimeout(function() {
-        onReadyDomElement(element, callback);
-      }, 100);
-    }
-  };
+// var onReadyDomElement = (element, callback) => {
+//     if (jQuery(element).length) {
+//       callback(jQuery(element));
+//     } else {
+//       setTimeout(function() {
+//         onReadyDomElement(element, callback);
+//       }, 100);
+//     }
+//   };
   
 
 
@@ -61,7 +68,8 @@ const init = () => {
 let etape = 0;
 
 const pages = [
-    {titre: "Page 1 et ça marche", html: "content/content-1.html"},
+   // {titre: "Page 1 et ça marche", html: "content/content-1.html"},
+   new Page("Page 1 et ça marche","content/content-1.html"),
     {titre: "Page 2", html: "content/content-2.html"},
     {titre: "Page 3", html: "content/content-3.html"},
 
